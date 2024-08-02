@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 
 // components
 import Socials from "@/components/Socials";
@@ -22,7 +23,7 @@ const Home = () => {
             </p>
             {/* btn and socails */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/CV.pdf" download>
+              <Link href="/Cv.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"
@@ -31,7 +32,7 @@ const Home = () => {
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />
                 </Button>
-              </a>
+              </Link>
               <div className="mb-8 xl:mb-8">
                 <Socials />
               </div>
