@@ -3,7 +3,7 @@ import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
 
 // components
-import Socials from "@/components/Socials";
+import Social from "@/components/Socials";
 
 const Home = () => {
   return (
@@ -34,7 +34,7 @@ const Home = () => {
                 </Button>
               </Link>
               <div className="mb-8 xl:mb-8">
-                <Socials />
+                <Social />
               </div>
             </div>
           </div>
