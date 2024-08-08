@@ -53,7 +53,7 @@ const Photo = () => {
           className="absolute inset-0 flex items-center justify-center"
         >
           <img
-            src="/assets/new.png"
+            src="/assets/Toas.png"
             alt="Profile"
             className="object-cover rounded-full w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]"
             
