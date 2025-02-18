@@ -16,7 +16,7 @@ import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, odit.",
+    "I am a passionate Web Developer with 3 years of experience, specializing in front-end and back-end development to build responsive, high-performance web applications using modern technologies. As a freelancer, I am always open to new opportunities, bringing creativity and efficiency to every project. Fluent in English and French, I communicate effectively and collaborate seamlessly with clients and teams worldwide, ensuring visually appealing, optimized, and functional web solutions that enhance user experience and business growth.",
   info: [
     {
       fieldName: "Name",
@@ -54,7 +54,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, odit.",
+    "With 3 years of experience in web design and development, I specialize in front-end development and conversion rate optimization. As a Freelance Front-End Developer, I have successfully designed and developed multiple responsive websites and web applications using React, Tailwind CSS, and JavaScript, ensuring cross-device compatibility and enhanced user experience..",
   items: [
     {
       company: "E-Tech Hub",
@@ -79,7 +79,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, odit.",
+    "I have a Bachelor’s degree in Computer Science from Estam Formation University, which provided me with a strong foundation in software development, programming, and problem-solving. To further enhance my skills, I pursued additional certifications in Front-End and Back-End Development, gaining hands-on experience in modern web technologies. My training includes Python programming from New Horizon Nigeria, Back-End Development from E-Tech Hub, and Front-End Development from Side Hustle. These certifications have equipped me with the knowledge and practical expertise to build efficient, scalable, and user-friendly web applications.",
   items: [
     {
       institution: "New Horizon Nigeria",
@@ -108,7 +108,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, odit.",
+    "I have a strong technical foundation in web development, specializing in both front-end and back-end technologies. My expertise includes HTML5, CSS3, and JavaScript, allowing me to create structured, responsive, and interactive user interfaces. I am proficient in modern frameworks like React.js and Next.js, ensuring high-performance web applications with seamless user experiences. For styling, I utilize Tailwind CSS to build efficient and scalable designs and leverage Figma for UI/UX prototyping. On the backend, I have experience working with Node.js for developing dynamic applications and use Python for scripting and backend logic. My diverse skill set enables me to build fully functional, optimized, and visually appealing web solutions.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -265,7 +265,9 @@ const Resume = () => {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skills.icon}</div>
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skills.icon}
+                              </div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skills.name}</p>
@@ -280,18 +282,26 @@ const Resume = () => {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-col-2 gap-y-6 max-w-[628px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}:</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>

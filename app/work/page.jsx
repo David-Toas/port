@@ -25,7 +25,7 @@ const projects = [
     category: "Frontend",
     title: "Edusity",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quibusdam atque quam, eum quo unde!",
+      "A modern educational platform designed to provide an interactive learning experience. Built with HTML5, CSS3, and JavaScript, Edusity offers a seamless user interface, responsive design, and optimized performance for both students and educators.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/thumb1.png",
     live: "https://toas-uni.vercel.app/",
@@ -36,7 +36,7 @@ const projects = [
     category: "Frontend",
     title: "Toas Shop",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quibusdam atque quam, eum quo unde!",
+      "A dynamic e-commerce website built using Next.js and Tailwind CSS, designed to deliver a smooth online shopping experience. With a sleek UI, fast-loading pages, and a responsive layout, Toas Shop enhances user engagement and improves online sales",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: "/assets/work/thumb2.png",
     live: "https://toas-e-commerce-website.vercel.app/",
@@ -47,7 +47,7 @@ const projects = [
     category: "FullStack",
     title: "Tinkteq",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quibusdam atque quam, eum quo unde!",
+      "A real-time collaboration platform developed with Next.js, Tailwind CSS, and WebSocket. Tinkteq enables users to connect, communicate, and work together seamlessly, featuring a responsive UI and smooth data synchronization",
     stack: [
       { name: "Next.js" },
       { name: "Tailwind.cs" },
@@ -62,7 +62,7 @@ const projects = [
     category: "Frontend",
     title: "Homeland",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quibusdam atque quam, eum quo unde!",
+      "A real estate website showcasing properties with a clean and intuitive design. Developed using HTML5, CSS3, and JavaScript, Homeland provides an easy-to-navigate interface, making property search and discovery effortless for users.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/thumb4.png",
     live: "https://real-estate-toas.vercel.app/",
@@ -73,7 +73,7 @@ const projects = [
     category: "Frontend",
     title: "Hoobank",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quibusdam atque quam, eum quo unde!",
+      "A modern banking web app designed for seamless digital transactions. Built with Next.js and Tailwind CSS, Hoobank features a sleek UI, responsive design, and a user-friendly experience for managing financial services online.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: "/assets/work/thumb5.png",
     live: "https://hoobank-ebon-seven.vercel.app/",
