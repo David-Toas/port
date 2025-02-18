@@ -26,7 +26,7 @@ const Home = () => {
             </p>
             {/* btn and socails */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href="/Cv.pdf" target="_blank" download>
+              <Link href="/Web Dev Resume.pdf" target="_blank" download>
                 <Button
                   variant="outline"
                   size="lg"

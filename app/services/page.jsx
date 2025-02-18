@@ -21,7 +21,7 @@ const services = [
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Bug Fixing",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus, dui at tristique consectetur, ipsum velit malesuada libero, sed blandit eros metus non lectus.",
     href: "",

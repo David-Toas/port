@@ -1,10 +1,12 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+
 // components
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import { Toaster } from "sonner";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -15,6 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "Portfolio Website",
   description: "My Website Development profile page",
+  keywords: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Portfolio"],
+  robots: "index, follow",
+  
 };
 
 export default function RootLayout({ children }) {
@@ -24,6 +29,7 @@ export default function RootLayout({ children }) {
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
+        <Toaster richColors/>
       </body>
     </html>
   );
