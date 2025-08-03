@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Olabode Portfolio",
+  title: "Toas",
   description: "My Website Development profile page",
   keywords: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Portfolio"],
   robots: "index, follow",
