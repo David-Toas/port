@@ -40,11 +40,50 @@ const info = [
 ];
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
+
+  const validateForm = (formData) => {
+    const errors = {};
+    const email = formData.get('email');
+    const firstName = formData.get('first_name');
+    const lastName = formData.get('last_name');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+
+    if (!firstName?.trim()) errors.firstName = 'First name is required';
+    if (!lastName?.trim()) errors.lastName = 'Last name is required';
+    if (!email?.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+    if (!phone?.trim()) {
+      errors.phone = 'Phone number is required';
+    } else if (!/^[\+]?[\d\s\-\(\)]+$/.test(phone)) {
+      errors.phone = 'Please enter a valid phone number';
+    }
+    if (!message?.trim()) errors.message = 'Message is required';
+
+    return errors;
+  };
+
   const onSubmit = async (event) => {
     event.preventDefault();
-    toast.loading("Sending....");
+    setIsSubmitting(true);
+    setFormErrors({});
 
     const formData = new FormData(event.target);
+    const errors = validateForm(formData);
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      setIsSubmitting(false);
+      toast.error('Please fix the form errors');
+      return;
+    }
+
+    toast.loading("Sending message...");
     formData.append("access_key", "a1bf641e-88bd-44bd-accf-b8e09650a484");
 
     try {
@@ -57,17 +96,20 @@ const Contact = () => {
 
       if (data.success) {
         toast.dismiss();
-        toast.success("Email Submitted Successfully");
+        toast.success("Message sent successfully! I'll get back to you soon.");
         event.target.reset();
+        setFormErrors({});
       } else {
         console.log("Error", data);
         toast.dismiss();
-        toast.error(data.message || "Something went wrong");
+        toast.error(data.message || "Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error(error);
       toast.dismiss();
-      toast.error("Failed to send email");
+      toast.error("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -76,7 +118,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
       className="py-6"
     >
@@ -161,15 +203,35 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               {/* Textarea */}
-              <Textarea
-                name="message"
-                className="h-[200px]"
-                placeholder="Type your message here"
-                required
-              />
+              <div>
+                <Textarea
+                  name="message"
+                  className={`h-[200px] ${
+                    formErrors.message ? 'border-red-500 focus:border-red-500' : 'focus:border-accent'
+                  } transition-colors`}
+                  placeholder="Tell me about your project, timeline, and any specific requirements..."
+                  required
+                  aria-label="Project message"
+                />
+                {formErrors.message && (
+                  <p className="text-red-500 text-sm mt-1" role="alert">{formErrors.message}</p>
+                )}
+              </div>
               {/* Button */}
-              <Button size="md" type="submit" className="max-w-40">
-                Submit Message
+              <Button 
+                size="md" 
+                type="submit" 
+                className="max-w-40 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                    Sending...
+                  </div>
+                ) : (
+                  'Send Message'
+                )}
               </Button>
             </form>
           </div>

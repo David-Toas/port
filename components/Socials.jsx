@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import XIcon from '@mui/icons-material/X';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const socials = [
-  { icon: <FaGithub />, path: "https://github.com/David-Toas" },
-  { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/showole-olabode" },
-  { icon: <FaTwitter />, path: "https://x.com/Toasking06" },
+  { icon: <GitHubIcon />, path: "https://github.com/David-Toas" },
+  { icon: <LinkedInIcon />, path: "https://www.linkedin.com/in/showole-olabode" },
+  { icon: <XIcon />, path: "https://x.com/Toasking06" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {

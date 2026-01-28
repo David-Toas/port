@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
@@ -48,15 +47,17 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+            transition: { delay: 0.6, duration: 0.4, ease: "easeInOut" },
           }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <img
+          <Image
             src="/assets/Toas.png"
-            alt="Profile"
+            alt="Olabode Showole - Portfolio"
+            width={350}
+            height={350}
+            priority
             className="object-cover rounded-full w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]"
-            
           />
         </motion.div>
       </motion.div>

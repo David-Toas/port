@@ -54,7 +54,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "With 3 years of experience in web design and development, I specialize in front-end development and conversion rate optimization. As a Freelance Front-End Developer, I have successfully designed and developed multiple responsive websites and web applications using React, Tailwind CSS, and JavaScript, ensuring cross-device compatibility and enhanced user experience..",
+    "With over 3 years of experience in web design and development, I specialize in front-end development and conversion rate optimization. As a Freelance Front-End Developer, I have successfully designed and developed multiple responsive websites and web applications using React, Tailwind CSS, and JavaScript, ensuring cross-device compatibility and enhanced user experience..",
   items: [
     {
       company: "E-Tech Hub",
@@ -167,7 +167,7 @@ const Resume = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >

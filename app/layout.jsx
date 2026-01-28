@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-        <Toaster richColors/>
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );
