@@ -28,7 +28,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "3 Years",
+      fieldValue: "3+ Years",
     },
     {
       fieldName: "Nationality",
@@ -40,6 +40,14 @@ const about = {
     },
     {
       fieldName: "Freelance",
+      fieldValue: "Available",
+    },
+    {
+      fieldName: "Full Time Job",
+      fieldValue: "Available",
+    },
+    {
+      fieldName: "Contract / Part Time",
       fieldValue: "Available",
     },
     {
@@ -67,9 +75,19 @@ const experience = {
       duration: "2023 - 2024",
     },
     {
-      company: "Frontend Web Developer",
+      company: "Freelancing",
       position: "Junior Web Developer",
-      duration: "2022 - Present",
+      duration: "2022 - 2025",
+    },
+    {
+      company: "E-Tech Hub",
+      position: "Frontend Development Tutor/Trainer",
+      duration: "2025 - Present",
+    },
+    {
+      company: "TOTUM LLC",
+      position: "Senior Web Developer",
+      duration: "2025 - Present",
     },
   ],
 };
@@ -81,6 +99,11 @@ const education = {
   description:
     "I have a Bachelor’s degree in Computer Science from Estam Formation University, which provided me with a strong foundation in software development, programming, and problem-solving. To further enhance my skills, I pursued additional certifications in Front-End and Back-End Development, gaining hands-on experience in modern web technologies. My training includes Python programming from New Horizon Nigeria, Back-End Development from E-Tech Hub, and Front-End Development from Side Hustle. These certifications have equipped me with the knowledge and practical expertise to build efficient, scalable, and user-friendly web applications.",
   items: [
+    // {
+    //   institution: "TS Academy",
+    //   degree: "Certificate of Completion (Python Programming)",
+    //   duration: "2024",
+    // },
     {
       institution: "New Horizon Nigeria",
       degree: "Certificate of Completion (Python Programming)",
@@ -186,7 +209,7 @@ const Resume = () => {
           {/* content */}
           <div className="min-h-[70vh] w-full">
             {/* experience */}
-            <TabsContent value="experience" className="w-full">
+            <TabsContent value="experience" className="w-full mb-6">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
@@ -218,7 +241,7 @@ const Resume = () => {
             </TabsContent>
 
             {/* education */}
-            <TabsContent value="education" className="w-full">
+            <TabsContent value="education" className="w-full mb-6">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
@@ -250,7 +273,7 @@ const Resume = () => {
             </TabsContent>
 
             {/* skills */}
-            <TabsContent value="skills" className="w-full h-full">
+            <TabsContent value="skills" className="w-full h-full mb-6">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
@@ -284,7 +307,7 @@ const Resume = () => {
             {/* about */}
             <TabsContent
               value="about"
-              className="w-full text-center xl:text-left"
+              className="w-full text-center xl:text-left mb-6"
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>

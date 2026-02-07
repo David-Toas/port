@@ -21,8 +21,7 @@ const Home = () => {
               <span className="text-accent">Olabode Showole</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at developing elegant websites designs and I am proficient
-              in various programming languages and technologies.
+              Frontend Developer with 3+ years of experience building responsive, scalable web applications using React, TypeScript, and Next.js. Passionate about clean UI, performance, and delivering user-centered digital solutions.
             </p>
             {/* btn and socails */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

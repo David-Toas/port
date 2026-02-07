@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 
 // components
@@ -25,6 +26,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script 
+          src="/no-metamask.js" 
+          strategy="beforeInteractive" 
+          id="no-metamask"
+        />
+      </head>
       <body className={jetbrainsMono.variable}>
         <Header />
         <StairTransition />
