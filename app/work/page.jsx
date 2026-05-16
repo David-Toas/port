@@ -23,27 +23,20 @@ const projects = [
   {
     num: "01",
     category: "Frontend",
-    title: "Edusity",
+    title: "Hoobank",
     description:
-      "🎓 Modern educational platform with interactive learning features and seamless user experience. Built with vanilla JavaScript for optimal performance, featuring responsive design that increased student engagement by 40% and improved learning outcomes through intuitive navigation.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "https://toas-uni.vercel.app/",
-    github: "https://github.com/David-Toas/Toas-Uni",
+      "💳 Next-generation banking interface with intuitive design and seamless transactions. Built with React and modern fintech principles, featuring secure authentication, real-time notifications, and user-friendly dashboard that improves customer satisfaction by 45%.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "React.js" },
+    ],
+    image: "/assets/work/thumb5.png",
+    live: "https://hoobank-ebon-seven.vercel.app/",
+    github: "https://github.com/David-Toas/Hoobank",
   },
   {
-    num: "02",
-    category: "Frontend",
-    title: "Toas Shop",
-    description:
-      "🛒 High-performance e-commerce platform with lightning-fast loading and smooth checkout experience. Built with Next.js and Tailwind CSS, featuring optimized product discovery, secure payment integration, and mobile-first design that converts 25% better than average.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb2.png",
-    live: "https://toas-e-commerce-website.vercel.app/",
-    github: "https://github.com/David-Toas/e_commerce_website",
-  },
-  {
-    num: "03",
+    num: "04",
     category: "FullStack",
     title: "Tinkteq",
     description:
@@ -52,13 +45,52 @@ const projects = [
       { name: "Next.js" },
       { name: "Tailwind.css" },
       { name: "WebSocket" },
+      { name: "React.js" },
     ],
     image: "/assets/work/thumb3.png",
     live: "https://tinkteq.vercel.app/",
     github: "https://github.com/David-Toas/Tinkteq",
   },
   {
+    num: "03",
+    category: "Frontend",
+    title: "Toas Shop",
+    description:
+      "🛒 High-performance e-commerce platform with lightning-fast loading and smooth checkout experience. Built with Next.js and Tailwind CSS, featuring optimized product discovery, secure payment integration, and mobile-first design that converts 25% better than average.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "React.js" },
+    ],
+    image: "/assets/work/thumb2.png",
+    live: "https://toas-e-commerce-website.vercel.app/",
+    github: "https://github.com/David-Toas/e_commerce_website",
+  },
+  {
     num: "04",
+    category: "Frontend",
+    title: "Elevault",
+    description:
+      "Elevault is a fintech platform redefining personal savings through intelligent vault-based money management. The platform enables users to create dedicated financial vaults for budgeting, expenses, and savings goals while earning daily compounded interest in a secure, mobile-first ecosystem. By combining automation, financial organization, and user-friendly design, Elevault delivers a smarter and more personalized digital banking experience.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/homepage.png",
+    live: "https://elevault.vercel.app/",
+    github: "https://github.com/David-Toas/Elevault",
+  },
+  {
+    num: "05",
+    category: "Frontend",
+    title: "Edusity",
+    description:
+      "🎓 Modern educational platform with interactive learning features and seamless user experience. Built with vanilla JavaScript for optimal performance, featuring responsive design that increased student engagement by 40% and improved learning outcomes through intuitive navigation.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/work/thumb1.png",
+    live: "https://toas-uni.vercel.app/",
+    github: "https://github.com/David-Toas/Toas-Uni",
+  },
+
+  {
+    num: "06",
     category: "Frontend",
     title: "Homeland",
     description:
@@ -67,17 +99,6 @@ const projects = [
     image: "/assets/work/thumb4.png",
     live: "https://real-estate-toas.vercel.app/",
     github: "https://github.com/David-Toas/Real-Estate",
-  },
-  {
-    num: "05",
-    category: "Frontend",
-    title: "Hoobank",
-    description:
-      "💳 Next-generation banking interface with intuitive design and seamless transactions. Built with React and modern fintech principles, featuring secure authentication, real-time notifications, and user-friendly dashboard that improves customer satisfaction by 45%.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb5.png",
-    live: "https://hoobank-ebon-seven.vercel.app/",
-    github: "https://github.com/David-Toas/Hoobank",
   },
 ];
 
