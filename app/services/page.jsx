@@ -9,7 +9,7 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "I specialize in creating modern, responsive, and efficient websites that provide a seamless user experience. Whether it’s a personal portfolio, business website, or web application, I ensure that every project is built with clean code, fast performance, and mobile-friendly design, helping you establish a strong online presence.",
+      "I specialize in developing modern, responsive, and scalable web applications that deliver exceptional user experiences across all devices. Whether it's a business platform, SaaS product, e-commerce solution, or custom web application, I build robust frontend interfaces and reliable backend systems with a strong focus on performance, security, and maintainability. By leveraging modern technologies and best development practices, I create high-quality digital solutions that help businesses streamline operations, engage users, and achieve their goals.",
     href: "/work",
   },
   {
@@ -23,7 +23,7 @@ const services = [
     num: "03",
     title: "Bug Fixing",
     description:
-      "Encountering errors, glitches, or performance issues in your website or application? I specialize in debugging and troubleshooting to ensure your system runs smoothly. From fixing broken features to optimizing performance, I carefully analyze and resolve issues, preventing future problems and improving overall functionality.",
+      "I specialize in diagnosing and resolving bugs, errors, and performance issues across web applications to ensure smooth and reliable system behavior. From fixing broken features and debugging complex issues to optimizing performance and improving code efficiency, I take a systematic approach to identifying root causes and delivering lasting solutions. My goal is to enhance application stability, prevent recurring issues, and ensure optimal functionality across both frontend and backend systems.",
     href: "/work",
   },
   {
