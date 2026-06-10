@@ -22,6 +22,86 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
+    category: "Fullstack",
+    title: "Media-Buyer",
+    description:
+      "Built a high-converting media buying platform that streamlines the process of obtaining professional advertising strategies and campaign plans. The application features a modern, conversion-focused landing page, service showcase, lead-capture workflows, and responsive user experience designed to help businesses connect with expert media buyers efficiently. Developed with a strong emphasis on performance, clean UI/UX, and scalable frontend architecture, delivering a seamless experience across desktop and mobile devices. The project demonstrates expertise in modern web development, responsive design, and marketing-focused product implementation.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "React.js" },
+      { name: "JavaScript" },
+    ],
+    image: "/assets/work/media.png",
+    live: "https://www.media-buyer.net/",
+    github: "https://github.com/David-Toas/second-copy-clone",
+  },
+  // {
+  //   num: "01",
+  //   category: "Frontend",
+  //   title: "Roomfit",
+  //   description:
+  //     "RoomFit is a modern fitness and wellness platform designed to help users stay active and achieve their fitness goals from the comfort of their homes. The application provides access to a curated library of bodyweight workouts and exercise routines that require little to no equipment, making fitness more accessible regardless of location or experience level. Built with a clean, responsive interface, RoomFit enables users to easily discover exercises, follow guided workout plans, and maintain a consistent training routine. The platform promotes convenient, flexible, and effective home-based fitness for individuals seeking a healthier lifestyle.",
+  //   stack: [
+  //     { name: "Next.js" },
+  //     { name: "Tailwind.css" },
+  //     { name: "React.js" },
+  //   ],
+  //   image: "/assets/work/room.png",
+  //   live: "https://hoobank-ebon-seven.vercel.app/",
+  //   github: "https://github.com/David-Toas/Hoobank",
+  // },
+  // {
+  //   num: "02",
+  //   category: "Backend",
+  //   title: "Roomfit-Backend",
+  //   description:
+  //     "RoomFit is a fitness and wellness platform designed to help users stay active by providing personalized workout routines and exercise plans that can be performed from the comfort of their homes. The backend powers user authentication, workout management, progress tracking, and personalized fitness recommendations, ensuring a seamless and engaging fitness experience. Built with a scalable API architecture and integrated cloud services, the platform efficiently manages user data, exercise content, and fitness progress across devices. This project showcases expertise in backend development, database design, authentication systems, and building reliable APIs for health and fitness applications.",
+  //   stack: [
+  //     { name: "Node.js" },
+  //     { name: "Express.js" },
+  //     { name: "JavaScript" },
+  //     { name: "MongoDB" },
+  //     { name: "Swagger" },
+  //   ],
+  //   image: "/assets/work/roomfit-backend.png",
+  //   live: "https://roomfit-backend.vercel.app/",
+  //   github: "https://github.com/David-Toas/Roomfit-Backend",
+  // },
+  {
+    num: "02",
+    category: "Backend",
+    title: "Phoenix NGO",
+    description:
+      "Phoenix NGO is a full-stack NGO management platform designed to streamline nonprofit operations by centralizing donor management, fundraising campaigns, volunteer coordination, and impact tracking within a single digital ecosystem. The application enables organizations to manage donations, monitor campaign progress, engage supporters, and maintain transparent records through an intuitive and responsive user interface. Built with a modern web architecture, it emphasizes operational efficiency, accountability, and data-driven decision-making for nonprofit organizations. The platform helps NGOs strengthen donor relationships, improve resource management, and amplify their social impact through scalable digital tools.",
+    stack: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "JavaScript" },
+      { name: "MongoDB" },
+      { name: "Swagger" },
+    ],
+    image: "/assets/work/Phoenix.png",
+    live: "https://phoenix-ngo.vercel.app/",
+    github: "https://github.com/David-Toas/NGO-Management-System",
+  },
+  {
+    num: "03",
+    category: "Frontend",
+    title: "GemCommerce",
+    description:
+      "GemCommerce is a modern full-stack e-commerce platform built to deliver a fast, scalable, and seamless online shopping experience. The application features product discovery, dynamic product pages, shopping cart functionality, and a streamlined checkout flow, all wrapped in a responsive and user-friendly interface. Developed with a modern web stack, it leverages server-side rendering and optimized data fetching to ensure excellent performance, SEO, and accessibility across devices. The project demonstrates expertise in building production-ready e-commerce solutions, combining intuitive UI/UX design with robust frontend architecture and scalable development practices.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "React.js" },
+    ],
+    image: "/assets/work/Gemcommerce.png",
+    live: "https://gem-commerce-ashen.vercel.app/",
+    github: "https://github.com/David-Toas/GemCommerce",
+  },
+  {
+    num: "04",
     category: "Frontend",
     title: "Hoobank",
     description:
@@ -36,7 +116,7 @@ const projects = [
     github: "https://github.com/David-Toas/Hoobank",
   },
   {
-    num: "04",
+    num: "05",
     category: "FullStack",
     title: "Tinkteq",
     description:
@@ -52,7 +132,7 @@ const projects = [
     github: "https://github.com/David-Toas/Tinkteq",
   },
   {
-    num: "03",
+    num: "06",
     category: "Frontend",
     title: "Toas Shop",
     description:
@@ -67,7 +147,7 @@ const projects = [
     github: "https://github.com/David-Toas/e_commerce_website",
   },
   {
-    num: "04",
+    num: "07",
     category: "Frontend",
     title: "Elevault",
     description:
@@ -78,7 +158,7 @@ const projects = [
     github: "https://github.com/David-Toas/Elevault",
   },
   {
-    num: "05",
+    num: "08",
     category: "Frontend",
     title: "Edusity",
     description:
@@ -90,7 +170,7 @@ const projects = [
   },
 
   {
-    num: "06",
+    num: "09",
     category: "Frontend",
     title: "Homeland",
     description:

@@ -4,11 +4,11 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    num: 4,
+    num: 5,
     text: "Years of experience",
   },
   {
-    num: 25,
+    num: 37,
     text: "Projects completed",
   },
   {
@@ -16,7 +16,7 @@ const stats = [
     text: "Technologies mastered",
   },
   {
-    num: 120,
+    num: 243,
     text: "Codes commits",
   },
 ];
@@ -39,9 +39,13 @@ const Stats = () => {
                   delay={2}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
-                <p className={`${
-                  item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                } leading-snug text-white/80`}>{item.text}</p>
+                <p
+                  className={`${
+                    item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
+                  } leading-snug text-white/80`}
+                >
+                  {item.text}
+                </p>
               </div>
             );
           })}
@@ -50,5 +54,5 @@ const Stats = () => {
     </section>
   );
 };
- 
+
 export default Stats;

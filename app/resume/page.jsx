@@ -8,15 +8,22 @@ import {
   FaFigma,
   FaNodeJs,
   FaPython,
+  FaGit,
 } from "react-icons/fa";
 
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import {
+  SiMongodb,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 // about data
 const about = {
   title: "About me",
   description:
-    "I am a passionate Web Developer with 3 years of experience, specializing in front-end and back-end development to build responsive, high-performance web applications using modern technologies. As a freelancer, I am always open to new opportunities, bringing creativity and efficiency to every project. Fluent in English and French, I communicate effectively and collaborate seamlessly with clients and teams worldwide, ensuring visually appealing, optimized, and functional web solutions that enhance user experience and business growth.",
+    "I am a passionate Full-Stack Developer with over 5 years of experience building responsive, scalable, and high-performance web applications using modern technologies. With expertise in both frontend and backend development, I create seamless digital experiences using React, Next.js, TypeScript, JavaScript, Node.js, and related technologies. As a freelancer, I enjoy collaborating with clients and teams to transform ideas into reliable, user-centered solutions that balance functionality, performance, and design. Fluent in English, I am committed to delivering clean, maintainable code and innovative web solutions that drive user engagement and support business growth.",
   info: [
     {
       fieldName: "Name",
@@ -28,7 +35,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "3+ Years",
+      fieldValue: "5+ Years",
     },
     {
       fieldName: "Nationality",
@@ -52,7 +59,7 @@ const about = {
     },
     {
       fieldName: "Language",
-      fieldValue: "English, French",
+      fieldValue: "English, French (Basic)",
     },
   ],
 };
@@ -62,7 +69,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "With over 3 years of experience in web design and development, I specialize in front-end development and conversion rate optimization. As a Freelance Front-End Developer, I have successfully designed and developed multiple responsive websites and web applications using React, Tailwind CSS, and JavaScript, ensuring cross-device compatibility and enhanced user experience..",
+    "With over 5 years of experience in web development, I specialize in building responsive, user-focused web applications and optimizing digital experiences for performance and engagement. As a Full-Stack Developer, I have successfully designed and developed scalable websites and applications using React, Next.js, TypeScript, JavaScript, Node.js, and Tailwind CSS, delivering seamless functionality across both frontend and backend systems. I am committed to creating clean, maintainable code, intuitive user interfaces, and robust solutions that drive business growth and enhance user satisfaction.",
   items: [
     {
       company: "E-Tech Hub",
@@ -99,11 +106,11 @@ const education = {
   description:
     "I have a Bachelor’s degree in Computer Science from Estam Formation University, which provided me with a strong foundation in software development, programming, and problem-solving. To further enhance my skills, I pursued additional certifications in Front-End and Back-End Development, gaining hands-on experience in modern web technologies. My training includes Python programming from New Horizon Nigeria, Back-End Development from E-Tech Hub, and Front-End Development from Side Hustle. These certifications have equipped me with the knowledge and practical expertise to build efficient, scalable, and user-friendly web applications.",
   items: [
-    // {
-    //   institution: "TS Academy",
-    //   degree: "Certificate of Completion (Python Programming)",
-    //   duration: "2024",
-    // },
+    {
+      institution: "TS Academy",
+      degree: "Certificate of Completion (Backend Programming)",
+      duration: "2026",
+    },
     {
       institution: "New Horizon Nigeria",
       degree: "Certificate of Completion (Python Programming)",
@@ -168,6 +175,22 @@ const skills = {
     {
       icon: <FaPython />,
       name: "Python",
+    },
+    {
+      icon: <FaGit />,
+      name: "Git",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "TypeScript",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "Mongodb",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "Postgresql",
     },
   ],
 };

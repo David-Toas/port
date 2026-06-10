@@ -15,17 +15,23 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Website Developer</span>
+            <span className="text-xl">Fullstack Developer</span>
             <h1 className="text-[48px] xl:text-[70px] leading-[1.1] font-semibold mb-6">
               Hello I'm <br />
               <span className="text-accent">Olabode Showole</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Frontend Developer with 3+ years of experience building responsive, scalable web applications using React, TypeScript, and Next.js. Passionate about clean UI, performance, and delivering user-centered digital solutions.
+              Experienced Full-Stack Developer with 5+ years of expertise
+              architecting and delivering modern web applications using React,
+              Next.js, TypeScript, JavaScript, and Node.js. Adept at building
+              scalable frontend interfaces, backend services, RESTful APIs, and
+              database-driven applications. Committed to engineering
+              high-quality software solutions that enhance business outcomes,
+              improve user engagement, and maintain long-term scalability.
             </p>
             {/* btn and socails */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href="/Web Dev Resume.pdf" target="_blank" download>
+              <Link href="/Olabode Showole.pdf" target="_blank" download>
                 <Button
                   variant="outline"
                   size="lg"
@@ -36,7 +42,10 @@ const Home = () => {
                 </Button>
               </Link>
               <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"/>
+                <Social
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                />
               </div>
             </div>
           </div>
@@ -47,8 +56,7 @@ const Home = () => {
         </div>
       </div>
 
-<Stats />
-
+      <Stats />
     </section>
   );
 };

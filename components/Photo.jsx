@@ -52,7 +52,8 @@ const Photo = () => {
           className="absolute inset-0 flex items-center justify-center"
         >
           <Image
-            src="/assets/Toas.png"
+            src="/assets/Olabode.png"
+            // src="/assets/Toas.png"
             alt="Olabode Showole - Portfolio"
             width={350}
             height={350}
