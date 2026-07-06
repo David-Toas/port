@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   FaHtml5,
   FaCss3,
@@ -10,6 +12,7 @@ import {
   FaPython,
   FaGit,
 } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 
 import {
   SiMongodb,
@@ -23,7 +26,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "I am a passionate Full-Stack Developer with over 5 years of experience building responsive, scalable, and high-performance web applications using modern technologies. With expertise in both frontend and backend development, I create seamless digital experiences using React, Next.js, TypeScript, JavaScript, Node.js, and related technologies. As a freelancer, I enjoy collaborating with clients and teams to transform ideas into reliable, user-centered solutions that balance functionality, performance, and design. Fluent in English, I am committed to delivering clean, maintainable code and innovative web solutions that drive user engagement and support business growth.",
+    "I am a versatile professional with over 5 years of experience combining full-stack development with customer service, client support, and problem-solving. I build responsive, scalable web applications using modern technologies while also bringing strong communication, empathy, and relationship management skills to every project. Whether I am developing software or supporting clients, I focus on delivering thoughtful, reliable, and user-centered solutions that create value for both businesses and people.",
   info: [
     {
       fieldName: "Name",
@@ -99,6 +102,37 @@ const experience = {
   ],
 };
 
+const customerExperience = {
+  title: "Customer experience",
+  description:
+    "My background in customer service has sharpened my ability to communicate clearly, solve problems quickly, and build trust with clients and users. I bring a service-first mindset to technical and non-technical work alike, making me effective in support, client-facing collaboration, and relationship management.",
+  items: [
+    {
+      company: "Client Support",
+      position: "Customer Service & Client Success",
+      duration: "2023 - Present",
+    },
+    {
+      company: "Freelance Clients",
+      position: "Project Communication & Problem Resolution",
+      duration: "2022 - Present",
+    },
+    {
+      company: "Team Collaboration",
+      position: "Supportive Relationship Building",
+      duration: "2021 - Present",
+    },
+  ],
+  strengths: [
+    "Communication",
+    "Empathy",
+    "Issue Resolution",
+    "Relationship Building",
+    "Active Listening",
+    "Customer Focus",
+  ],
+};
+
 // education data
 const education = {
   icon: "/assets/resume/cap.svg",
@@ -138,7 +172,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "I have a strong technical foundation in web development, specializing in both front-end and back-end technologies. My expertise includes HTML5, CSS3, and JavaScript, allowing me to create structured, responsive, and interactive user interfaces. I am proficient in modern frameworks like React.js and Next.js, ensuring high-performance web applications with seamless user experiences. For styling, I utilize Tailwind CSS to build efficient and scalable designs and leverage Figma for UI/UX prototyping. On the backend, I have experience working with Node.js for developing dynamic applications and use Python for scripting and backend logic. My diverse skill set enables me to build fully functional, optimized, and visually appealing web solutions.",
+    "I bring together strong technical skills and customer-facing strengths. My experience includes building modern web applications and also supporting clients effectively through clear communication, empathy, and problem-solving. This blend allows me to contribute confidently in both development teams and service-oriented environments.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -195,6 +229,7 @@ const skills = {
   ],
 };
 
+import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
@@ -207,6 +242,19 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
+const resumeOptions = [
+  {
+    title: "Full-Stack Developer Resume",
+    description: "Best for software, web, and technical roles",
+    file: "/Olabode-Showole-Full Stack.pdf",
+  },
+  {
+    title: "Customer Service Resume",
+    description: "Best for support, client success, and service-focused roles",
+    file: "/Olabode-Showole-CSR.pdf",
+  },
+];
+
 const Resume = () => {
   return (
     <motion.div
@@ -218,12 +266,45 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
+        {/* <div className="mb-8 rounded-2xl border border-white/10 bg-[#232329]/70 p-6">
+          <div className="flex flex-col gap-2 text-center xl:text-left">
+            <h2 className="text-2xl font-semibold">Download my resume</h2>
+            <p className="max-w-[700px] text-white/70">
+              I offer two versions of my resume so you can choose the one that
+              best matches the role you are hiring for, whether it is technical
+              or customer-facing.
+            </p>
+          </div>
+          <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+            {resumeOptions.map((resume) => (
+              <Link
+                key={resume.title}
+                href={resume.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                <Button
+                  variant="outline"
+                  className="flex w-full items-center justify-center gap-2 sm:w-auto"
+                >
+                  <span>{resume.title}</span>
+                  <FiDownload className="text-lg" />
+                </Button>
+              </Link>
+            ))}
+          </div>
+        </div> */}
+
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[300px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="customer-experience">
+              Customer experience
+            </TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
@@ -260,6 +341,53 @@ const Resume = () => {
                     })}
                   </ul>
                 </ScrollArea>
+              </div>
+            </TabsContent>
+
+            {/* customer experience */}
+            <TabsContent value="customer-experience" className="w-full mb-6">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">
+                  {customerExperience.title}
+                </h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {customerExperience.description}
+                </p>
+                <ScrollArea className="h-[300px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {customerExperience.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
+                          <span className="text-accent">{item.duration}</span>
+                          <h3 className="text-xl max-w-[268px] min-h-[60px] text-center lg:text-left">
+                            {item.position}
+                          </h3>
+                          <div className="flex items-center gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60">{item.company}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+
+                <div className="rounded-xl border border-white/10 bg-[#232329]/80 p-6">
+                  <h4 className="text-xl font-semibold">Key strengths</h4>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {customerExperience.strengths.map((strength, index) => (
+                      <span
+                        key={index}
+                        className="rounded-full border border-accent/40 bg-accent/10 px-3 py-2 text-sm text-accent"
+                      >
+                        {strength}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </TabsContent>
 

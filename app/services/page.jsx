@@ -14,23 +14,23 @@ const services = [
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "Customer Support & Client Success",
     description:
-      "I design intuitive and visually appealing interfaces that make websites and applications easy to use. My focus is on creating a smooth user journey, ensuring that every element is both functional and aesthetically pleasing. Through wireframing, prototyping, and user research, I bring ideas to life in a way that keeps users engaged.",
+      "I bring a strong customer-focused approach to every project by listening carefully, solving problems quickly, and creating positive experiences for clients and users. My background in customer service helps me communicate clearly, manage expectations, and build trust while delivering technical solutions that meet real needs.",
     href: "/work",
   },
   {
     num: "03",
-    title: "Bug Fixing",
+    title: "Debugging & Optimization",
     description:
       "I specialize in diagnosing and resolving bugs, errors, and performance issues across web applications to ensure smooth and reliable system behavior. From fixing broken features and debugging complex issues to optimizing performance and improving code efficiency, I take a systematic approach to identifying root causes and delivering lasting solutions. My goal is to enhance application stability, prevent recurring issues, and ensure optimal functionality across both frontend and backend systems.",
     href: "/work",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Collaboration & Product Improvement",
     description:
-      "Having a website is not enough; it needs to be visible to the right audience. I implement proven SEO strategies to improve search rankings, increase organic traffic, and enhance website performance. From keyword optimization to technical SEO, I help your site get discovered by those who need your services the most.",
+      "I work well with teams, clients, and stakeholders to turn ideas into practical digital products. By combining technical knowledge with strong communication and feedback handling, I help improve products continuously and ensure they align with user expectations and business goals.",
     href: "/work",
   },
 ];
