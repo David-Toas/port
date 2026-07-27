@@ -5,14 +5,17 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold transition-colors duration-200 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         default: "bg-accent text-primary hover:bg-accent-hover",
-        primary: "bg-primary text-white",
+        primary: "bg-surface text-content hover:bg-surface-2",
         outline:
           "border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary",
+        // client-success track — never a second primary CTA
+        warm: "border border-warm bg-warm-soft text-warm hover:bg-warm hover:text-primary",
+        ghost: "bg-transparent text-content-muted hover:bg-surface hover:text-content",
       },
       size: {
         default: "h-[44px] px-6",

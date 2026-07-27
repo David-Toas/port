@@ -20,14 +20,32 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: "var(----font-jetbrainsMono)",
+      // body + headings
+      primary: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+      // accents only: logo, stat numbers, tech labels, eyebrows
+      mono: ["var(--font-jetbrainsMono)", "ui-monospace", "monospace"],
     },
     extend: {
       colors: {
-        primary: "#1c1c22",
+        // every value resolves to a custom property defined in app/globals.css
+        primary: "var(--bg)",
+        surface: {
+          DEFAULT: "var(--surface)",
+          2: "var(--surface-2)",
+        },
+        line: "var(--border)",
+        content: {
+          DEFAULT: "var(--text)",
+          muted: "var(--text-muted)",
+        },
         accent: {
-          DEFAULT: "#00ff99",
-          hover: "#00e187", 
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+          soft: "var(--accent-soft)",
+        },
+        warm: {
+          DEFAULT: "var(--warm)",
+          soft: "var(--warm-soft)",
         },
       },
 

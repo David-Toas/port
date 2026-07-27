@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
@@ -6,13 +6,20 @@ import Script from "next/script";
 // components
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
 import { Toaster } from "sonner";
 
+// body + headings
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+// logo, stat numbers, tech labels, eyebrows — accents only, never body copy
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-jetbrainsMono",
+  display: "swap",
 });
 
 export const metadata = {
@@ -33,11 +40,10 @@ export default function RootLayout({ children }) {
           id="no-metamask"
         />
       </head>
-      <body className={jetbrainsMono.variable}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
         <Header />
-        <StairTransition />
         <PageTransition>{children}</PageTransition>
-        <Toaster richColors position="top-right" />
+        <Toaster richColors position="top-right" theme="dark" />
       </body>
     </html>
   );

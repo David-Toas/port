@@ -18,7 +18,6 @@ import {
 
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-import { motion } from "framer-motion";
 import { toast } from "sonner";
 
 const info = [
@@ -114,14 +113,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="py-6"
-    >
+    <section className="py-6">
       <div className="container mx-auto">
         <div className="flex flex-col-reverse xl:flex-row gap-[30px]">
           {/* info */}
@@ -130,11 +122,11 @@ const Contact = () => {
               {info.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center gap-6">
-                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] border border-line bg-surface-2 text-accent rounded-md flex items-center justify-center">
                       <div className="xl:text-[28px] ">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-white/60">{item.title}</h3>
+                      <h3 className="text-content-muted">{item.title}</h3>
                       <p className="text-xl">{item.content}</p>
                     </div>
                   </li>
@@ -145,44 +137,44 @@ const Contact = () => {
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-1">
             <form
-              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              className="flex flex-col gap-6 p-10 border border-line bg-surface rounded-xl"
               onSubmit={onSubmit}
             >
-              <h3 className="text-4xl text-accent">Let's work together</h3>
-              <p className="text-white/60">
+              <h3 className="text-4xl font-semibold">Let's work together</h3>
+              <p className="text-content-muted">
                 Every project deserves attention to detail and expert execution.
                 From design to development, I ensure quality, performance, and a
                 seamless user experience. Let’s work together to create
                 something that truly makes an impact.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
+                <Input
                   type="text"
                   name="first_name"
                   placeholder="First Name"
+                  aria-label="First name"
                   required
-                  className="flex h-[48px] rounded-md border border-white/10 focus:border-accent bg-primary font-light px-4 py-5 text-base placeholder:text-white/60 outline-none"
                 />
-                <input
+                <Input
                   type="text"
                   name="last_name"
                   placeholder="Last Name"
+                  aria-label="Last name"
                   required
-                  className="flex h-[48px] rounded-md border border-white/10 focus:border-accent bg-primary font-light px-4 py-5 text-base placeholder:text-white/60 outline-none"
                 />
-                <input
+                <Input
                   type="email"
                   name="email"
                   placeholder="Email address"
+                  aria-label="Email address"
                   required
-                  className="flex h-[48px] rounded-md border border-white/10 focus:border-accent bg-primary font-light px-4 py-5 text-base placeholder:text-white/60 outline-none"
                 />
-                <input
+                <Input
                   type="tel"
                   name="phone"
                   placeholder="Phone number"
+                  aria-label="Phone number"
                   required
-                  className="flex h-[48px] rounded-md border border-white/10 focus:border-accent bg-primary font-light px-4 py-5 text-base placeholder:text-white/60 outline-none"
                 />
               </div>
               {/* Select */}
@@ -207,8 +199,8 @@ const Contact = () => {
                 <Textarea
                   name="message"
                   className={`h-[200px] ${
-                    formErrors.message ? 'border-red-500 focus:border-red-500' : 'focus:border-accent'
-                  } transition-colors`}
+                    formErrors.message ? 'border-red-500 focus:border-red-500' : ''
+                  }`}
                   placeholder="Tell me about your project, timeline, and any specific requirements..."
                   required
                   aria-label="Project message"
@@ -237,7 +229,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

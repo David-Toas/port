@@ -1,10 +1,6 @@
 "use client";
 
 import { useSwiper } from "swiper/react";
-import { CaretLeft, CaretRight } from "phosphor-react";
-// import { PiCaretleftBold, PiCaretRightBold } from "react-icons/pi";
-
-import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const WorkSliderBtns = ({ containerStyles, btnStyles, iconsStyles }) => {
@@ -12,13 +8,19 @@ const WorkSliderBtns = ({ containerStyles, btnStyles, iconsStyles }) => {
 
   return (
     <div className={containerStyles}>
-      <button className={btnStyles} onClick={() => swiper.slidePrev()}>
-        {/* <ChevronLeft className={iconsStyles} /> */}
-        <CaretLeft size={24} className={iconsStyles}/>
+      <button
+        className={btnStyles}
+        onClick={() => swiper.slidePrev()}
+        aria-label="Previous project"
+      >
+        <ChevronLeft className={iconsStyles} size={24} />
       </button>
-      <button className={btnStyles} onClick={() => swiper.slideNext()}>
-        {/* <ChevronRight className={iconsStyles} /> */}
-        <CaretRight size={24}  className={iconsStyles}/>
+      <button
+        className={btnStyles}
+        onClick={() => swiper.slideNext()}
+        aria-label="Next project"
+      >
+        <ChevronRight className={iconsStyles} size={24} />
       </button>
     </div>
   );

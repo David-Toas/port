@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Design tokens — "Ink, Teal & Sand".
+  Teal (--accent) carries engineering content, sand (--warm) carries
+  client-success content. Never introduce a raw hex outside this block.
+*/
+:root {
+  --bg: #0b0f14;
+  --surface: #11161d;
+  --surface-2: #18202a;
+  --border: #232e3a;
+  --text: #e8edf2;
+  --text-muted: #94a3b2;
+  --accent: #2dd4a7;
+  --accent-hover: #24be96;
+  --accent-soft: rgba(45, 212, 167, 0.12);
+  --warm: #f2b880;
+  --warm-soft: rgba(242, 184, 128, 0.12);
+}
+
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-content leading-relaxed antialiased;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -16,10 +35,97 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .text-outline {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--text);
   }
 
   .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px var(--accent);
+  }
+
+  /* visible keyboard focus — the site had none */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-primary;
+  }
+}
+
+/*
+  Entrance animations are CSS, not Framer Motion, so content is never
+  invisible while waiting for hydration. Transform + opacity only.
+  Stagger with an inline animation-delay.
+*/
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* the masked hero lines — each rides up from behind its own clip */
+@keyframes line-rise {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+  SVG children default to transform-origin 0 0, so a rotation would orbit the
+  viewBox corner instead of spinning in place. Both properties are explicit.
+*/
+.animate-ring-spin {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation: ring-spin 60s linear infinite;
+}
+
+.animate-page-enter {
+  animation: page-enter 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-reveal {
+  animation: reveal-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-line {
+  animation: line-rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/*
+  Reduced motion. Framer Motion components additionally check
+  useReducedMotion(); this covers the CSS keyframes above and any
+  transition missed elsewhere. `both` fill-mode means each animation
+  lands on its final state immediately rather than being skipped.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

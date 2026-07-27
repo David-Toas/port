@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
-import Image from "next/image";
 import { Button } from "./ui/button";
 
 // components
@@ -9,12 +7,17 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white font-primary">
+    <header className="py-8 xl:py-12 text-content">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-primary"
+      >
+        Skip to content
+      </a>
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
-            {/* <Image src="/toas" alt="logo " className="w-auto"/> */}
+          <h1 className="font-mono text-4xl font-semibold">
             Toas<span className="text-accent">.</span>
           </h1>
         </Link>

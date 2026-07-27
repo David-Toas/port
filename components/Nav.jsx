@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { cn } from "@/lib/utils";
+
 const links = [
   {
-    name: "Home",
+    name: "home",
     path: "/",
   },
   {
@@ -30,15 +32,17 @@ const Nav = () => {
   const pathname = usePathname();
   return (
     <nav className="flex gap-8">
-      {links.map((link, index) => {
+      {links.map((link) => {
+        const isActive = link.path === pathname;
         return (
           <Link
             href={link.path}
-            key={index}
-            className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
-            } capitalize font-medium hover:text-accent
-            transition-all`}
+            key={link.path}
+            aria-current={isActive ? "page" : undefined}
+            className={cn(
+              "capitalize font-medium text-content-muted transition-colors duration-200 hover:text-content",
+              isActive && "text-accent border-b-2 border-accent hover:text-accent"
+            )}
           >
             {link.name}
           </Link>
