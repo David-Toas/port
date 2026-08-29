@@ -104,7 +104,7 @@ const projects = [
     category: "Frontend",
     title: "Hoobank",
     description:
-      "💳 Next-generation banking interface with intuitive design and seamless transactions. Built with React and modern fintech principles, featuring secure authentication, real-time notifications, and user-friendly dashboard that improves customer satisfaction by 45%.",
+      "Hoobank is a modern banking interface concept built with React and Next.js, featuring a clean account dashboard, transaction views, and authentication flows. Built to explore fintech UI patterns in a polished, responsive frontend.",
     stack: [
       { name: "Next.js" },
       { name: "Tailwind.css" },
@@ -119,7 +119,7 @@ const projects = [
     category: "FullStack",
     title: "Tinkteq",
     description:
-      "🚀 Real-time collaboration platform powering seamless team communication. Developed with Next.js, WebSocket technology, and modern UI/UX principles. Features instant messaging, file sharing, and synchronized workspaces that boost team productivity by 60%.",
+      "Tinkteq is a real-time collaboration interface built with Next.js and WebSockets, featuring live messaging and synchronized workspace views. Built to explore real-time state management and socket-based communication in a modern frontend stack.",
     stack: [
       { name: "Next.js" },
       { name: "Tailwind.css" },
@@ -135,7 +135,7 @@ const projects = [
     category: "Frontend",
     title: "Toas Shop",
     description:
-      "🛒 High-performance e-commerce platform with lightning-fast loading and smooth checkout experience. Built with Next.js and Tailwind CSS, featuring optimized product discovery, secure payment integration, and mobile-first design that converts 25% better than average.",
+      "Toas Shop is a frontend e-commerce build using Next.js and Tailwind CSS, featuring product browsing, cart functionality, and a responsive, mobile-first checkout flow.",
     stack: [
       { name: "Next.js" },
       { name: "Tailwind.css" },
@@ -161,7 +161,7 @@ const projects = [
     category: "Frontend",
     title: "Edusity",
     description:
-      "🎓 Modern educational platform with interactive learning features and seamless user experience. Built with vanilla JavaScript for optimal performance, featuring responsive design that increased student engagement by 40% and improved learning outcomes through intuitive navigation.",
+      "Edusity is an educational platform interface built with vanilla JavaScript, HTML, and CSS, featuring course browsing and a responsive, navigation-focused layout built without a frontend framework.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/thumb1.png",
     live: "https://toas-uni.vercel.app/",
@@ -173,7 +173,7 @@ const projects = [
     category: "Frontend",
     title: "Homeland",
     description:
-      "🏠 Premium real estate platform with advanced property search and virtual tours. Features intelligent filtering, interactive maps, and mobile-optimized browsing that helps users find their dream homes 3x faster than traditional property sites.",
+      "Homeland is a real estate listings interface built with vanilla JavaScript, HTML, and CSS, featuring property search, filtering, and a responsive browsing experience.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/thumb4.png",
     live: "https://real-estate-toas.vercel.app/",

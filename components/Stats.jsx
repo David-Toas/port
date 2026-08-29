@@ -7,11 +7,11 @@ import { useInView, usePrefersReducedMotion } from "@/lib/hooks";
 
 const stats = [
   {
-    num: 5,
+    num: 8,
     text: "Years of experience",
   },
   {
-    num: 37,
+    num: 24,
     text: "Projects completed",
   },
   {
@@ -19,8 +19,8 @@ const stats = [
     text: "Technologies mastered",
   },
   {
-    num: 243,
-    text: "Codes commits",
+    num: 1540,
+    text: "Contributions",
   },
 ];
 

@@ -13,9 +13,9 @@ const services = [
   },
   {
     num: "02",
-    title: "Customer Support & Client Success",
+    title: "API & Backend Development",
     description:
-      "I bring a strong customer-focused approach to every project by listening carefully, solving problems quickly, and creating positive experiences for clients and users. My background in customer service helps me communicate clearly, manage expectations, and build trust while delivering technical solutions that meet real needs.",
+      "I design and build reliable backend systems and RESTful APIs using Node.js, Express, and NestJS, with PostgreSQL and MongoDB for data modeling. From authentication and real-time features to third-party integrations and payment gateways, I focus on clean architecture, secure data handling, and APIs that scale with the product.",
     href: "/work",
   },
   {

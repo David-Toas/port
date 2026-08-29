@@ -23,7 +23,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "I am a versatile professional with over 5 years of experience combining full-stack development with customer service, client support, and problem-solving. I build responsive, scalable web applications using modern technologies while also bringing strong communication, empathy, and relationship management skills to every project. Whether I am developing software or supporting clients, I focus on delivering thoughtful, reliable, and user-centered solutions that create value for both businesses and people.",
+    "I'm a full-stack engineer with 8+ years of combined IT and software development experience, currently focused on React, Next.js, and TypeScript on the frontend, and Node.js on the backend. I've architected production SaaS and e-commerce platforms, mentored developers, and bring a client-facing background from IT support and vendor management that makes me effective in remote, cross-functional teams.",
   info: [
     {
       fieldName: "Name",
@@ -35,7 +35,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "5+ Years",
+      fieldValue: "8+ Years",
     },
     {
       fieldName: "Nationality",
@@ -69,64 +69,38 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "With over 5 years of experience in web development, I specialize in building responsive, user-focused web applications and optimizing digital experiences for performance and engagement. As a Full-Stack Developer, I have successfully designed and developed scalable websites and applications using React, Next.js, TypeScript, JavaScript, Node.js, and Tailwind CSS, delivering seamless functionality across both frontend and backend systems. I am committed to creating clean, maintainable code, intuitive user interfaces, and robust solutions that drive business growth and enhance user satisfaction.",
+    "Senior full-stack engineer with 8+ years of combined IT and software development experience. I've architected and delivered a production e-commerce SaaS platform using React, Next.js, TypeScript, and Node.js, mentored developers, and worked in AWS/Docker production environments. Earlier in my career I worked in data management and IT support — experience that still shows up in how I think about security, systems, and working with non-technical stakeholders.",
   items: [
     {
-      company: "E-Tech Hub",
-      position: "Front-End Developer Intern",
-      duration: "2023 - 2024",
-    },
-    {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2023 - 2024",
-    },
-    {
-      company: "Freelancing",
-      position: "Junior Web Developer",
-      duration: "2022 - 2025",
-    },
-    {
-      company: "E-Tech Hub",
-      position: "Frontend Development Tutor/Trainer",
-      duration: "2025 - Present",
+      company: "TOTUM LLC",
+      position: "Senior Full-Stack Engineer",
+      duration: "Oct 2025 - Present",
     },
     {
       company: "TOTUM LLC",
-      position: "Senior Web Developer",
-      duration: "2025 - Present",
-    },
-  ],
-};
-
-const customerExperience = {
-  title: "Customer experience",
-  description:
-    "My background in customer service has sharpened my ability to communicate clearly, solve problems quickly, and build trust with clients and users. I bring a service-first mindset to technical and non-technical work alike, making me effective in support, client-facing collaboration, and relationship management.",
-  items: [
-    {
-      company: "Client Support",
-      position: "Customer Service & Client Success",
-      duration: "2023 - Present",
+      position: "Freelance Frontend Developer (Contract)",
+      duration: "Apr 2025 - Sep 2025",
     },
     {
-      company: "Freelance Clients",
-      position: "Project Communication & Problem Resolution",
-      duration: "2022 - Present",
+      company: "E-Tech Hub",
+      position: "Web Developer and Technical Trainer",
+      duration: "Apr 2023 - Sep 2025",
     },
     {
-      company: "Team Collaboration",
-      position: "Supportive Relationship Building",
-      duration: "2021 - Present",
+      company: "Self-Employed",
+      position: "Freelance Web Developer",
+      duration: "Feb 2021 - Present",
     },
-  ],
-  strengths: [
-    "Communication",
-    "Empathy",
-    "Issue Resolution",
-    "Relationship Building",
-    "Active Listening",
-    "Customer Focus",
+    {
+      company: "Strategic Outsourcing Ltd (Polaris Bank)",
+      position: "Data Management Specialist",
+      duration: "2022 - 2023",
+    },
+    {
+      company: "One Touch Computer Center",
+      position: "IT Technician",
+      duration: "2017 - 2018",
+    },
   ],
 };
 
@@ -169,7 +143,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "I bring together strong technical skills and customer-facing strengths. My experience includes building modern web applications and also supporting clients effectively through clear communication, empathy, and problem-solving. This blend allows me to contribute confidently in both development teams and service-oriented environments.",
+    "I work across the full stack — React, Next.js, and TypeScript on the frontend, Node.js on the backend, and PostgreSQL or MongoDB for data. I care about clean architecture, performance, and shipping features that hold up in production.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -248,9 +222,6 @@ const Resume = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[300px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="customer-experience">
-              Customer experience
-            </TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
@@ -287,53 +258,6 @@ const Resume = () => {
                     })}
                   </ul>
                 </ScrollArea>
-              </div>
-            </TabsContent>
-
-            {/* customer experience */}
-            <TabsContent value="customer-experience" className="w-full mb-6">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">
-                  {customerExperience.title}
-                </h3>
-                <p className="max-w-[600px] text-content-muted mx-auto xl:mx-0">
-                  {customerExperience.description}
-                </p>
-                <ScrollArea className="h-[300px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {customerExperience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-surface border border-line h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[268px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-content-muted">{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
-
-                <div className="rounded-xl border border-line bg-surface p-6">
-                  <h4 className="text-xl font-semibold">Key strengths</h4>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {customerExperience.strengths.map((strength, index) => (
-                      <span
-                        key={index}
-                        className="rounded-full border border-warm-soft bg-warm-soft px-3 py-2 text-sm text-warm"
-                      >
-                        {strength}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
             </TabsContent>
 

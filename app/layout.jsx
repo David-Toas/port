@@ -23,11 +23,26 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Toas",
-  description: "My Website Development profile page",
-  keywords: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Portfolio"],
+  metadataBase: new URL("https://olabode.vercel.app"),
+  title: "Olabode Showole | Senior Full-Stack Engineer",
+  description:
+    "Senior Full-Stack Engineer specializing in React, Next.js, TypeScript, and Node.js. 8+ years of combined IT and software development experience building production web applications.",
+  keywords: ["Next.js", "React", "TypeScript", "Node.js", "Full-Stack Engineer", "Portfolio"],
   robots: "index, follow",
-  
+  openGraph: {
+    title: "Olabode Showole | Senior Full-Stack Engineer",
+    description:
+      "Senior Full-Stack Engineer specializing in React, Next.js, TypeScript, and Node.js.",
+    url: "https://olabode.vercel.app",
+    siteName: "Olabode Showole",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Olabode Showole | Senior Full-Stack Engineer",
+    description:
+      "Senior Full-Stack Engineer specializing in React, Next.js, TypeScript, and Node.js.",
+  },
 };
 
 export default function RootLayout({ children }) {
